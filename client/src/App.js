@@ -9,7 +9,7 @@ class App extends Component {
         <Router />
         <footer
           className="p-4 text-white text-center"
-          style={{ backgroundColor: "#0E2F56" }}
+          style={{ backgroundColor: "#117864" }}
         >
           Krishankant Blog CMS
         </footer>

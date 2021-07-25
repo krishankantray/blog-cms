@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { singlePost, update } from "./apiPost";
 import { isAuthenticated } from "../auth";
 import { Redirect } from "react-router-dom";
-import Logo from "../core/Logo.png";
 import CKEditor from "@ckeditor/ckeditor5-react";
 import DecoupledEditor from "@ckeditor/ckeditor5-build-decoupled-document";
 
@@ -171,7 +170,7 @@ class EditPost extends Component {
             style={{ height: "200px", width: "auto" }}
             className="img-thumbnail"
             src={`/api/post/photo/${this.props.match.params.postId}`}
-            onError={(i) => (i.target.src = `${Logo}`)}
+            onError={(i) => (i.target.alt = "Not found")}
             alt={title}
           />
           {isAuthenticated().user._id === id && this.editPostForm(title, body)}

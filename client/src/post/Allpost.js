@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { list, pageList } from "./apiPost";
 import { Link } from "react-router-dom";
-import Logo from "../core/Logo.png";
 class Allpost extends Component {
   constructor() {
     super();
@@ -56,7 +55,7 @@ class Allpost extends Component {
                   <img
                     src={`/api/post/photo/${post._id}`}
                     alt={post.title}
-                    onError={(i) => (i.target.src = `${Logo}`)}
+                    onError={(i) => (i.target.alt = "Not found")}
                     className="img-fluid mb-3"
                     style={{
                       height: "200px",

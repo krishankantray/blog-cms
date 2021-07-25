@@ -31,6 +31,9 @@ class User extends Component {
                     alt="avatar"
                     style={{ height: "128px" }}
                     src={user._id ? `/api/user/photo/${user._id}` : Default}
+                    onError={(i) => {
+                      i.target.src = `${Default}`;
+                    }}
                     className="rounded-circle"
                   />
                 </div>

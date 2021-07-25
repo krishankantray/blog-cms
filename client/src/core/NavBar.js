@@ -2,26 +2,16 @@ import React from "react";
 import { NavLink, withRouter } from "react-router-dom";
 
 import { logout, isAuthenticated } from "../auth";
-import Logo from "./Logo.png";
 const Navbar = ({ history }) => {
   const name = isAuthenticated() ? isAuthenticated().user.name : "";
   const id = isAuthenticated() ? isAuthenticated().user._id : "";
   return (
     <nav
       className="navbar navbar-expand-lg navbar-dark scrolling-navbar"
-      style={{ backgroundColor: "#0E2F56" }}
+      style={{ backgroundColor: "#117864" }}
     >
       <NavLink to="/" className="navbar-brand">
-        <img
-          alt="brand"
-          src={Logo}
-          style={{
-            height: "100px",
-            maxWidth: "140px",
-            marginTop: "-30px",
-            marginBottom: "-40px",
-          }}
-        ></img>
+        <h3>Blog-CMS</h3>
       </NavLink>
       <button
         className="navbar-toggler"

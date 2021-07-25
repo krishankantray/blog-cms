@@ -4,7 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 import { isAuthenticated } from "../auth";
 import Comment from "./Comment";
 import Share from "./Share";
-import Logo from "../core/Logo.png";
+
 class SinglePost extends Component {
   state = {
     post: "",
@@ -88,7 +88,7 @@ class SinglePost extends Component {
         <img
           src={`/api/post/photo/${post._id}`}
           alt={post.title}
-          onError={(i) => (i.target.src = `${Logo}`)}
+          onError={(i) => (i.target.alt = "Not found")}
           className="img-fluid mb-3"
           style={{
             height: "300px",
